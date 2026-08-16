@@ -1,10 +1,11 @@
 import { useState } from "react";
 import styled from "styled-components";
 
+/* Interface */
 interface BotaoProps {
     $adicionado: boolean;
 }
-
+/* Estilo do Styled Components */
 const Card = styled.div`
     width: 300px;
     padding: 20px;
@@ -32,7 +33,7 @@ const Botao = styled.button<BotaoProps>`
     background-color: ${({ $adicionado }) =>
         $adicionado ? "#198754" : "#6c757d"};
 `;
-
+/* Card Produto */
 export function CardProduto() {
     const [adicionado, setAdicionado] = useState(false);
 
