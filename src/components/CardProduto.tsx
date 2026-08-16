@@ -34,11 +34,7 @@ const Botao = styled.button<BotaoProps>`
 `;
 
 export function CardProduto() {
-    const [adicionado, setAdicionado] = useState(true);
-
-    function adicionarProduto() {
-        setAdicionado(false);
-    }
+    const [adicionado, setAdicionado] = useState(false);
 
     return (
         <Card>
@@ -48,7 +44,7 @@ export function CardProduto() {
 
             <Botao
                 $adicionado={adicionado}
-                onClick={adicionarProduto}
+                onClick={() => setAdicionado(!adicionado)}
             >
                 Adicionar ao carrinho
             </Botao>
